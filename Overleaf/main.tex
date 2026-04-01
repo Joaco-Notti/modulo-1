@@ -1,0 +1,181 @@
+% a mashup of hipstercv, friggeri and twenty cv
+% https://www.latextemplates.com/template/twenty-seconds-resumecv
+% https://www.latextemplates.com/template/friggeri-resume-cv
+
+\documentclass[lighthipster]{simplehipstercv}
+% available options are: darkhipster, lighthipster, pastel, allblack, grey, verylight, withoutsidebar
+% withoutsidebar
+\usepackage[utf8]{inputenc}
+\usepackage[default]{raleway}
+\usepackage[margin=1cm, a4paper]{geometry}
+
+
+%------------------------------------------------------------------ Variablen
+
+\newlength{\rightcolwidth}
+\newlength{\leftcolwidth}
+\setlength{\leftcolwidth}{0.23\textwidth}
+\setlength{\rightcolwidth}{0.75\textwidth}
+
+%------------------------------------------------------------------
+\title{New Simple CV}
+\author{\LaTeX{} Ninja}
+\date{June 2019}
+
+\pagestyle{empty}
+\begin{document}
+
+
+\thispagestyle{empty}
+%-------------------------------------------------------------
+
+\section*{Start}
+
+\simpleheader{headercolour}{Joaquin}{Notti}{Aplicante}{white}
+
+
+
+%------------------------------------------------
+
+% this has to be here so the paracols starts..
+\subsection*{}
+\vspace{4em}
+
+\setlength{\columnsep}{1.5cm}
+\columnratio{0.23}[0.75]
+\begin{paracol}{2}
+\hbadness5000
+%\backgroundcolor{c[1]}[rgb]{1,1,0.8} % cream yellow for column-1 %\backgroundcolor{g}[rgb]{0.8,1,1} % \backgroundcolor{l}[rgb]{0,0,0.7} % dark blue for left margin
+
+\paracolbackgroundoptions
+
+% 0.9,0.9,0.9 -- 0.8,0.8,0.8
+
+
+\footnotesize
+{\setasidefontcolour
+\flushright
+\begin{center}
+    \roundpic{jack.jpg}
+\end{center}
+
+\bg{cvgreen}{white}{Sobre Mi}\\[0.5em]
+
+{Soy un estudiante de ingenieria industrial en la universidad nacional de cuyo, tengo 20 años y me encuentro cursando el tercer año de mi carrera, en mis tiempos libres me gusta ver la television ir al gimnasio o juntarme con mis amigos}
+\bigskip
+
+\bg{cvgreen}{white}{Personal} \\[0.5em]
+Joaquin Notti
+
+nationalidad: Argentino 
+
+2005
+
+\bigskip
+
+
+\vspace{4em}
+
+\infobubble{\faAt}{cvgreen}{white}{JoacoNotti}
+\infobubble{\faTwitter}{cvgreen}{white}{JoaquinNotti}
+\infobubble{\faFacebook}{cvgreen}{white}{Joaco Notti}
+\infobubble{\faGithub}{cvgreen}{white}{NottiJ}
+
+\phantom{turn the page}
+
+\phantom{turn the page}
+}
+%-----------------------------------------------------------
+\switchcolumn
+
+\small
+\section*{Historia academica}
+
+\begin{tabular}{r| p{0.5\textwidth} c}
+    \cvevent{2011--2018}{Escuela primaria}{Escuela}{San jose de los hermanos maristas \color{cvred}}{En esta etapa desarrolle la mayoria de mis habilidades sociales.}{maristas.jpg} \\
+    \cvevent{2016--2017}{Escuela secundaria}{Escuela}{Tortuga \color{cvred}}{En esta etapa desarrolle la mayoria de mis habilidades preacademicas y tecnicas}{misericordia.jpg}
+\end{tabular}
+\vspace{3em}
+
+\begin{minipage}[t]{0.35\textwidth}
+\section*{Promedios}
+\begin{tabular}{r p{0.6\textwidth} c}
+    \cvdegree{1710}{Primario}{completo}{prom:9,64\color{headerblue}}{}{maristas.jpg} \\
+    \cvdegree{1715}{Secundario}{completo}{prom:9,01 \color{headerblue}}{}{misericordia.jpg} \\
+    \cvdegree{1720}{Ingles}{Nivel}{B1 \color{headerblue}}{}{maristas.jpg}
+\end{tabular}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.3\textwidth}
+\section*{Habilidades}
+\begin{tabular}{r @{\hspace{0.5em}}l}
+     \bg{skilllabelcolour}{iconcolour}{Manejo exel} &  \barrule{0.4}{0.5em}{cvpurple}\\
+     \bg{skilllabelcolour}{iconcolour}{Versatibilidad} & \barrule{0.55}{0.5em}{cvgreen} \\
+     \bg{skilllabelcolour}{iconcolour}{Comunicacion} & \barrule{0.5}{0.5em}{cvpurple} \\
+     \bg{skilllabelcolour}{iconcolour}{Atencion} & \barrule{0.25}{0.5em}{cvpurple} \\
+     \bg{skilllabelcolour}{iconcolour}{Javascript} & \barrule{0.1}{0.5em}{cvpurple} \\
+\end{tabular}
+\end{minipage}
+
+\section*{Curriculum}
+\begin{tabular}{r| p{0.5\textwidth} c}
+    \cvevent{2021--2023}{Libreria Casaycole}{Mendoza}{Calle Pueyrredon 1620 \color{cvred}}{Trabaje en una libreria tanto organizando pedidos y mercaderia como atendiendo clientes y encargandome de las ventas}{casa.png} \\
+    \cvevent{2024}{Ramos Events}{Godoy Cruz}{Calle Peru 1394 \color{cvred}}{Trabaje ordenando muebles, organizando espacios, desplazando la inmobiliaria a los salones y con ek decorado de los mismos}{ramos.jpg} \\
+\end{tabular}
+\vspace{3em}
+
+\begin{minipage}[t]{0.3\textwidth}
+\section*{Hobbies \& Aficiones}
+\begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.55\textwidth}}
+    - & Entrenamiento corporal \\
+    - & Lectura \\
+    - & Intereses artisticos
+\end{tabular}
+\bigskip
+
+\section*{Lenguajes}
+\begin{tabular}{l | ll}
+\textbf{Español} & {\phantom{x}\footnotesize mother tongue} \\
+\textbf{Ingles} & \pictofraction{\faCircle}{cvgreen}{3}{black!30}{1}{\tiny} \\
+\textbf{Frances} & \pictofraction{\faCircle}{cvgreen}{1}{black!30}{3}{\tiny} \\
+\textbf{Italiano} & \pictofraction{\faCircle}{cvgreen}{3}{black!30}{1}{\tiny}
+\end{tabular}
+\bigskip
+
+\end{minipage}\hfill
+\begin{minipage}[t]{0.3\textwidth}
+\section*{Intereses}
+\begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.7\textwidth}}
+    - & \emph{Organizacion y resolucion de tareas} \\
+    - & \emph{Desarrollo y busqueda personal} 
+\end{tabular}
+\bigskip
+
+\section*{Areas de especializacion}
+\begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.7\textwidth}}
+    - & \emph{Direccion} \\
+    - & \emph{Adminitracion} 
+    - & \emph{Comunicacion} 
+\end{tabular}
+\end{minipage}
+
+
+
+
+
+
+\vfill{} % Whitespace before final footer
+
+%----------------------------------------------------------------------------------------
+%	FINAL FOOTER
+%----------------------------------------------------------------------------------------
+\setlength{\parindent}{0pt}
+\begin{minipage}[t]{\rightcolwidth}
+\begin{center}\fontfamily{\sfdefault}\selectfont \color{black!70}
+{\small Joaquin Notti \icon{\faEnvelopeO}{cvgreen}{} Argentina \icon{\faMapMarker}{cvgreen}{} Mendoza \icon{\faPhone}{cvgreen}{} 2616558841 \newline\icon{\faAt}{cvgreen}{} \protect\url{Joaquinnotti28@gmail.com}
+}
+\end{center}
+\end{minipage}
+
+\end{paracol}
+
+\end{document}
