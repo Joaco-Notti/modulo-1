@@ -1,0 +1,185 @@
+\documentclass[runningheads]{llncs}
+
+% Paquetes necesarios
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{graphicx} % Necesario para figuras
+\usepackage{hyperref} % Necesario para hipervínculos y referencias
+\usepackage{amsmath} 
+\usepackage{pdfpages}
+\usepackage{float}% Necesario para el entorno align de las ecuaciones
+
+% Configuración del estilo para listados de código
+\lstset{
+    basicstyle=\ttfamily\small,
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    stepnumber=1,
+    numbersep=8pt,
+    backgroundcolor=\color{white},
+    showspaces=false,
+    showstringspaces=false,
+    frame=single,
+    rulecolor=\color{black!30},
+    tabsize=2,
+    breaklines=true,
+    breakatwhitespace=true,
+    captionpos=b % Leyenda debajo del código
+}
+
+\begin{document}
+
+\title{Implementación de Estructuras Web en el Contexto de LNCS}
+\author{Joaquin Notti\inst{1}}
+\institute{Universidad Nacional de Cuyo}
+
+\maketitle
+
+\begin{abstract}
+Este documento presenta un ejemplo práctico de cómo incluir código fuente de lenguajes de marcado, específicamente HTML, Markdown y \LaTeX, dentro de la plantilla oficial de Springer LNCS.
+\end{abstract}
+
+\section{Introducción}
+En el desarrollo de aplicaciones web y en la documentación técnica, la estructura básica se define mediante etiquetas y marcas. A continuación, se detalla la sintaxis recomendada para estos lenguajes estándar.
+
+\section{Ejemplo Ampliado de Código HTML}
+El siguiente listado muestra la estructura de una página, integrando hipervínculos, listas, tablas, figuras y formato de texto. Note el resaltado de etiquetas y atributos.
+
+\begin{lstlisting}[language=HTML, keywordstyle=\color{blue}\bfseries, stringstyle=\color{orange}, commentstyle=\color{gray}\itshape, caption={Elementos avanzados de un documento HTML5.}, label={list:html_ejemplo}]
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Apuntes Universitarios</title>
+</head>
+<body>
+    <h1>Portal de <b>Ingeniería Industrial</b></h1>
+    <p>Resúmenes de <i>Termodinámica</i>.</p>
+
+    <hr>
+
+    <a href="#materias">Ver Materias (Ancla Interna)</a><br>
+    <a href="https://www.uncuyo.edu.ar/" target="_blank">Sitio UNCUYO (Externo)</a>
+
+    <img src="diagrama.jpg" alt="Diagrama de procesos" width="300">
+
+    <h3 id="materias">Materias cursadas:</h3>
+    <ul>
+        <li>Termodinámica</li>
+        <li>Electrotecnia</li>
+    </ul>
+
+    <h3>Calificaciones</h3>
+    <table border="1">
+        <tr>
+            <th>Materia</th>
+            <th>Nota</th>
+        </tr>
+        <tr>
+            <td>Termodinámica</td>
+            <td>9</td>
+        </tr>
+    </table>
+</body>
+</html>
+\end{lstlisting}
+
+Para conocer más sobre estas etiquetas, se recomienda consultar la Cheatsheet de HTML \cite{mdn_html_cheatsheet}.
+
+\section{Lenguaje de Marcas: Markdown}
+Markdown permite escribir usando un formato de texto plano fácil de leer, que luego se convierte estructuralmente en HTML.
+
+\begin{lstlisting}[language=bash, caption={Sintaxis estándar en Markdown.}, label={list:markdown}]
+# Apuntes de Ingeniería
+## Análisis Matemático 1
+
+Este apunte es **estructurado** y *fácil de leer*.
+
+### Contenido:
+* Derivadas
+* Integrales
+
+[Ir a Notion](https://www.notion.so)
+\end{lstlisting}
+
+Referencia rápida disponible en la Cheatsheet de Markdown \cite{markdown_cheatsheet}.
+
+\section{GitHub Flavored Markdown (Github.md)}
+Esta variante añade funcionalidades nativas orientadas a la gestión operativa y de proyectos.
+
+\begin{lstlisting}[language=bash, caption={Sintaxis de GitHub Flavored Markdown.}, label={list:gfm}]
+# Tareas de Gestión (Finca)
+
+- [x] Configurar base de datos en Notion.
+- [ ] Calcular aplicación de productos.
+
+| Insumo | Estado |
+|--------|--------|
+| Abono  | OK     |
+\end{lstlisting}
+
+Referencia rápida en la Cheatsheet de GitHub Markdown \cite{github_markdown_cheatsheet}.
+
+\section{Estructuras en \LaTeX}
+\LaTeX{} es el estándar para la documentación académica de alta calidad, permitiendo una separación total entre diseño y contenido.
+
+\begin{lstlisting}[language=TeX, caption={Sintaxis básica en \LaTeX.}, label={list:latex}]
+\documentclass{article}
+\begin{document}
+\section{Física}
+La ecuación de la energía es $E = mc^2$.
+\end{document}
+\end{lstlisting}
+
+Se puede consultar la guía rápida en la Cheatsheet de \LaTeX{} \cite{latex_cheatsheet}.
+
+\section{Conclusión}
+La adopción de $\text{\LaTeX}$, HTML y Markdown ha transformado mi flujo de trabajo, permitiéndome migrar de una edición intuitiva a una gestión documental programada. Este cambio garantiza una separación rigurosa entre la lógica del contenido y su representación visual, logrando una precisión estructural que los procesadores convencionales no pueden alcanzar.
+En el ejercicio de la Ingeniería Industrial, estas herramientas serán determinantes. Implementaré $\text{\LaTeX}$ como eje para la producción de informes técnicos y documentación de proyectos, asegurando rigor estético y normativo. Paralelamente, la versatilidad de Markdown y HTML facilitará la digitalización y distribución estratégica de mis recursos académicos, optimizando su legibilidad en entornos web y facilitando su escalabilidad como productos de información.
+A continuación, se presenta la comparativa técnica elaborada con asistencia de IA que resume esta transición:
+
+\begin{table}[H]
+\centering
+\caption{Comparativa del estado de conocimientos técnicos: Antes vs. Después del módulo.}
+\label{tab:comparativa}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|p{5.5cm}|p{6cm}|}
+\hline
+\textbf{Situación Previa (Antes)} & \textbf{Situación Actual (Después)} \\
+\hline
+Dependencia exclusiva de procesadores de texto visuales (WYSIWYG) con formatos inestables. & Habilidades de produccion de  documentos de calidad  con \LaTeX{}. \\
+\hline
+Dificultad para integrar y dar formato legible a bloques de código fuente. & Optimización de la legibilidad de código a través del entorno \texttt{listings} logrando una integración fluida y estilizada del software en el texto.. \\
+\hline
+Desconocimiento de la estructura semántica de los documentos web. & Dominio de la arquitectura de contenidos basada en HTML5 semántico y flujo de trabajo eficiente con sintaxis Markdown. \\
+\hline
+Gestión manual y propensa a errores de referencias cruzadas y bibliografía. & Sistematización de la gestión documental mediante bases de datos . \texttt{.bib}. automatizando el referenciado dinámico y el estilo bibliográfico. \\
+\hline
+\end{tabular}
+\end{table}
+
+\section{Ecuaciones de Maxwell}
+\bigskip
+
+\begin{align}
+    \nabla \cdot \mathbf{E} &= \frac{\rho}{\epsilon_0} && \text{(Ley de Gauss)} \\
+    \nabla \cdot \mathbf{B} &= 0 && \text{(Ley de Gauss del Magnetismo)} \\
+    \nabla \times \mathbf{E} &= -\frac{\partial \mathbf{B}}{\partial t} && \text{(Ley de Faraday)} \\
+    \nabla \times \mathbf{B} &= \mu_0 \mathbf{J} + \mu_0 \epsilon_0 \frac{\partial \mathbf{E}}{\partial t} && \text{(Ley de Ampère-Maxwell)}
+\end{align}
+
+\bigskip
+
+Como se observa en el Listado~\ref{list:html_ejemplo}, el uso del paquete \texttt{listings} permite mantener la legibilidad técnica requerida por las publicaciones de \textit{Lecture Notes in Computer Science}.
+
+% --- ESPACIO RESERVADO PARA EL CV (PUNTO 6) ---
+% Aquí insertaremos el paquete pdfpages y tu CV más adelante.
+
+% --- BIBLIOGRAFÍA ---
+\bibliographystyle{splncs04}
+\bibliography{referencias}
+\includepdf[pages=-, pagecommand={\thispagestyle{plain}}]{cv.pdf}
+
+\end{document}
