@@ -1,7 +1,7 @@
 # modulo-1
 | Nombre y Apellido | Dirección de mail | Número de teléfono | Link |
 |:-----------------:|:-----------------:|:------------------:|:------------------:|
-|Joaquin Notti|joaquinnotti@gmail.com|2616558841|https://github.com/Joaco-Notti|
+|Joaquin Notti|joaquinnotti28@gmail.com|2616558841|https://github.com/Joaco-Notti|
 
 # modulo-2
 https://github.com/Joaco-Notti/modulo-2
