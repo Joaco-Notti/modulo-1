@@ -1,17 +1,11 @@
-# modulo-1
+modulo-1
+Nombre y Apellido	Dirección de mail	Número de teléfono	Link
+Joaquin Notti	joaquinnotti@gmail.com	2616558841	https://github.com/Joaco-Notti
+modulo-2
+https://github.com/RaimundoGlasner/modulo-2
 
----
+modulo-3
+https://github.com/RaimundoGlasner/modulo-3
 
-
-**Ejercicio 1: Como crear, modificar y hacer el archivo README.md**
-
-**Ejercicio 2: Creación de un archivo html en forma manual**
-
-**Ejercicio 3: Crear un archivo LATex en <https://overleaf.com>**
-
-**Ejercicio 4: Creación de notebooks**
-
-**Ejercicio 5: Creación de un CV en LATex**
-
-**Ejercicio 6: Creación de un archivo con metadatos en el entorno R**
-
+modulo-4
+https://github.com/RaimundoGlasner/modulo-4
